@@ -1,0 +1,92 @@
+/* General styles */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%; /* Adjust width for responsiveness */
+  max-width: 900px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.intro-content {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.forms-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup-form,
+.login-form {
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+form p {
+  margin-top: 10px;
+}
+
+form a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  .intro-container {
+      width: 100%;
+  }
+}
