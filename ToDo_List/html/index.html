@@ -1,0 +1,214 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO List</title>
+  <style>
+    #todo-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin: 5px 0;
+    }
+    .todo-text {
+      flex: 1;
+    }
+    .delete-button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="todo-container">
+    <h1>TODO List</h1>
+    <input type="text" id="todo-input" placeholder="Add a new task">
+    <button id="add-button">Add</button>
+    <ul id="todo-list"></ul>
+  </div>
+
+  <script>
+    const todoInput = document.getElementById("todo-input");
+    const addButton = document.getElementById("add-button");
+    const todoList = document.getElementById("todo-list");
+
+    addButton.addEventListener("click", addTodo);
+
+    function addTodo() {
+      const todoText = todoInput.value.trim();
+      if (todoText === "") return;
+
+      const li = document.createElement("li");
+      const textSpan = document.createElement("span");
+      textSpan.classList.add("todo-text");
+      textSpan.textContent = todoText;
+
+      const deleteButton = document.createElement("button");
+      deleteButton.classList.add("delete-button");
+      deleteButton.textContent = "Delete";
+      deleteButton.addEventListener("click", () => {
+        li.remove();
+      });
+
+      li.appendChild(textSpan);
+      li.appendChild(deleteButton);
+      todoList.appendChild(li);
+
+      todoInput.value = "";
+    }
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO List</title>
+  <style>
+    /* ... Your existing CSS styles ... */
+  </style>
+</head>
+<body>
+  <div id="todo-container">
+    <h1>TODO List</h1>
+    <input type="text" id="todo-input" placeholder="Add a new task">
+    <button id="add-button">Add</button>
+    <button id="refresh-button">Refresh</button>
+    <p id="current-date"></p>
+    <p id="current-time"></p>
+    <ul id="todo-list"></ul>
+  </div>
+
+  <script>
+    /* ... Your existing JavaScript code ... */
+
+    const refreshButton = document.getElementById("refresh-button");
+    refreshButton.addEventListener("click", refreshList);
+
+    function refreshList() {
+      todoList.innerHTML = ""; // Clear the list
+    }
+
+    function updateDateTime() {
+      const currentDateElement = document.getElementById("current-date");
+      const currentTimeElement = document.getElementById("current-time");
+
+      const now = new Date();
+      const currentDate = now.toDateString();
+      const currentTime = now.toLocaleTimeString();
+
+      currentDateElement.textContent = `Date: ${currentDate}`;
+      currentTimeElement.textContent = `Time: ${currentTime}`;
+    }
+
+    // Update date and time on page load
+    updateDateTime();
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO List</title>
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div id="todo-container">
+    <h1>TODO List</h1>
+    <input type="text" id="todo-input" placeholder="Add a new task">
+    <input type="datetime-local" id="due-date-input">
+    <button id="add-button">Add</button>
+    <button id="refresh-button">Refresh</button>
+    <p id="current-date"></p>
+    <p id="current-time"></p>
+    <ul id="todo-list"></ul>
+  </div>
+
+  <script>
+
+  
+const refreshButton = document.getElementById("refresh-button");
+    refreshButton.addEventListener("click", refreshList);
+
+    function refreshList() {
+      todoList.innerHTML = ""; // Clear the list
+    }
+
+    function updateDateTime() {
+      const currentDateElement = document.getElementById("current-date");
+      const currentTimeElement = document.getElementById("current-time");
+
+      const now = new Date();
+      const currentDate = now.toDateString();
+      const currentTime = now.toLocaleTimeString();
+
+      currentDateElement.textContent = `Date: ${currentDate}`;
+      currentTimeElement.textContent = `Time: ${currentTime}`;
+    }
+
+    // Update date and time on page load
+    updateDateTime();
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+
+    const addButton = document.getElementById("add-button");
+    const dueDateInput = document.getElementById("due-date-input");
+
+    addButton.addEventListener("click", addTodo);
+
+    function addTodo() {
+      const todoText = todoInput.value.trim();
+      if (todoText === "") return;
+
+      const dueDate = new Date(dueDateInput.value);
+      const dueDateString = dueDate.toLocaleString();
+
+      const li = document.createElement("li");
+      const textSpan = document.createElement("span");
+      textSpan.classList.add("todo-text");
+      textSpan.textContent = todoText;
+
+      const dueDateSpan = document.createElement("span");
+      dueDateSpan.textContent = `Due: ${dueDateString}`;
+
+      const deleteButton = document.createElement("button");
+      deleteButton.classList.add("delete-button");
+      deleteButton.textContent = "Delete";
+      deleteButton.addEventListener("click", () => {
+        li.remove();
+      });
+
+      li.appendChild(textSpan);
+      li.appendChild(dueDateSpan);
+      li.appendChild(deleteButton);
+      todoList.appendChild(li);
+
+      todoInput.value = "";
+      dueDateInput.value = "";
+    }
+
+  </script>
+</body>
+</html>
