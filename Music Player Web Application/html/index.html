@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Music Player</h1>
+    <div class="song-name">
+      <marquee id="marquee" behavior="scroll" direction="left" scrollamount="3"></marquee>
+    </div>
+    <audio id="audio-player" controls>
+      <!-- Default audio source -->
+      <source id="audio-source" src="/audios/jiva shivachi bail jod.mp3" type="audio/mpeg">
+      <source id="audio-source" src="/audios/देव_मल्हारी_Song_{Lyrical}__Preet_Bandre_(128_kbps)_(Video28.com).mp3" type="audio/mpeg">
+      <source id="audio-source" src="/audios/गावठी_Marathi_movie_songs(128k).m4a" type="audio/mpeg">
+      <source id="audio-source" src="/audios/Yara_Teri_Yari_Ko.mp3" type="audio/mpeg">
+      <source id="audio-source" src="/audios/05_Jivala_Yetay_Baya_-_DJ_Nix(VipMarathi.in).mp3" type="audio/mpeg">
+      <source id="audio-source" src="/audios/01_-_Whistle_Baja_-_DownloadMing.SE_(1).mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="controls">
+      <button id="previous-button">Previous</button>
+      <button id="play-button">Play</button>
+      <button id="pause-button">Pause</button>
+      <button id="next-button">Next</button>
+    </div>
+    <div class="song-list">
+      <label for="song-selector">Select a Song:</label>
+      <select id="song-selector">
+        <option value="/audios/jiva shivachi bail jod.mp3">jiva shivachi bail jod</option>
+        <option value="/audios/देव_मल्हारी_Song_{Lyrical}__Preet_Bandre_(128_kbps)_(Video28.com).mp3">देव मल्हारी</option>
+        <option value="/audios/गावठी_Marathi_movie_songs(128k).m4a">गावठी_Marathi_movie_songs</option>
+        <option value="/audios/Yara_Teri_Yari_Ko.mp3">Yara_Teri_Yari_Ko</option>
+        <option value="/audios/05_Jivala_Yetay_Baya_-_DJ_Nix(VipMarathi.in).mp3">Jivala_Yetay_Baya</option>
+        <option value="/audios/01_-_Whistle_Baja_-_DownloadMing.SE_(1).mp3">Whistle Baja</option>
+        <!-- Add more song options as needed -->
+      </select>
+    </div>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

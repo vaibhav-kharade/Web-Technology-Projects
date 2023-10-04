@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e7bebe;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container:hover {
+  box-shadow: 10px 10px 15px rgba(246, 2, 148, 0.3);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.controls button {
+  margin: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.song-name {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#marquee {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Media query for screens with a maximum width of 768px (typical tablet size) */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+/* Media query for screens with a maximum width of 480px (typical mobile size) */
+@media (max-width: 480px) {
+  .controls button {
+    font-size: 14px;
+  }
+}
